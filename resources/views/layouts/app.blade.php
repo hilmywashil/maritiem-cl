@@ -2,128 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
-    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
-    <link rel="stylesheet" href="{{ asset('css/global.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/header-footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/ekatalog.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/organisasi.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/berita.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jadi-anggota.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/buku-informasi.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/info-kegiatan.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/strategic-plan.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/visi-misi.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/howtojoin.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/active-member.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/outline.css') }}">
+    <title>@yield('title') - CAAIP Maritiem</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7o3V8A4o0p5d6W0ZQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    @stack('styles')
+        href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+    <link rel="stylesheet" href="{{ asset('asset-front/fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('asset-front/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset-front/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset-front/css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset-front/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset-front/css/owl.theme.default.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('asset-front/css/bootstrap-datepicker.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('asset-front/fonts/flaticon/font/flaticon.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ asset('asset-front/css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('asset-front/css/style.css') }}">
+
 </head>
 
 <body>
 
-    @include('layouts.components.header')
+    <div class="site-wrap">
 
-    @yield('content')
+        @include('layouts.partials.header')
 
-    @include('layouts.components.footer')
+        @yield('content')
 
-    @include('layouts.components.footer-after')
+        @include('layouts.partials.footer')
 
-    <button id="btnTop"><i class="fa fa-arrow-up"></i></button>
+        @stack('scripts')
 
-@stack('scripts')
-    <script src="{{ asset('js/script.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.anggota-carousel').owlCarousel({
-                margin: 20,
-                nav: true,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 4000,
-                autoplayHoverPause: true,
-                loop: true,
-                smartSpeed: 800,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    480: {
-                        items: 1
-                    },
-                    768: {
-                        items: 3
-                    },
-                    1024: {
-                        items: 3
-                    }
-                }
-            });
-        });
-    </script>
+    </div>
 
-    <script>
-        $(document).ready(function () {
-            $('.showcase-carousel').owlCarousel({
-                margin: 20,
-                nav: true,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 4000,
-                autoplayHoverPause: true,
-                loop: true,
-                smartSpeed: 800,
-                responsive: {
-                    0: { items: 2 },
-                    480: { items: 3 },
-                    768: { items: 4 },
-                    1024: { items: 4 }
-                }
-            });
-        });
+    <script src="{{ asset('asset-front/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('asset-front/js/jquery-migrate-3.0.1.min.js') }}"></script>
+    <script src="{{ asset('asset-front/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('asset-front/js/popper.min.js') }}"></script>
+    <script src="{{ asset('asset-front/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('asset-front/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('asset-front/js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ asset('asset-front/js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('asset-front/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('asset-front/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('asset-front/js/aos.js') }}"></script>
 
-    </script>
-    <script>
-        const btnTop = document.getElementById("btnTop");
-
-        window.addEventListener("scroll", () => {
-            if (window.pageYOffset > 200) {
-                btnTop.style.display = "block";
-            } else {
-                btnTop.style.display = "none";
-            }
-        });
-
-        btnTop.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });    
-    </script>
+    <script src="{{ asset('asset-front/js/main.js') }}"></script>
 
 </body>
 

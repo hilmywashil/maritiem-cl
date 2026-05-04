@@ -149,17 +149,17 @@ Route::get('/e-katalog', [KatalogController::class, 'index'])->name('e-katalog')
 Route::get('/e-katalog/{katalog}', [KatalogController::class, 'show'])->name('e-katalog.detail');
 
 // Berita Public Routes
-Route::get('/berita', [BeritaController::class, 'index'])->name('berita');
-Route::get('/berita/{slug}', [BeritaController::class, 'show'])->name('berita-detail');
+Route::get('/news', [BeritaController::class, 'index'])->name('berita');
+Route::get('/news/{slug}', [BeritaController::class, 'show'])->name('berita-detail');
 
 // Other Public Pages
 Route::view('/organisasi', 'pages.organisasi')->name('organisasi');
 Route::view('/informasi-kegiatan', 'pages.informasi-kegiatan')->name('informasi-kegiatan');
 Route::view('/detail-kegiatan', 'pages.details.kegiatan-detail')->name('detail-kegiatan');
-Route::view('/asita-profile', 'pages.about')->name('about');
 Route::view('/vision-mission', 'pages.visi-misi')->name('vision-mission');
 Route::view('/how-to-join', 'pages.how-to-join')->name('how-to-join');
-Route::view('/contact', 'pages.contact')->name('contact');
+Route::view('/tentang', 'pages.about')->name('about');
+Route::view('/kontak', 'pages.contact')->name('contact');
 
 // Active Member & Outline
 Route::get('/active-member-asita', [KatalogController::class, 'letter'])->name('active-member');
