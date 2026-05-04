@@ -149,8 +149,8 @@ Route::get('/e-katalog', [KatalogController::class, 'index'])->name('e-katalog')
 Route::get('/e-katalog/{katalog}', [KatalogController::class, 'show'])->name('e-katalog.detail');
 
 // Berita Public Routes
-Route::get('/news', [BeritaController::class, 'index'])->name('berita');
-Route::get('/news/{slug}', [BeritaController::class, 'show'])->name('berita-detail');
+Route::get('/berita', [BeritaController::class, 'index'])->name('berita');
+Route::get('/berita/{slug}', [BeritaController::class, 'show'])->name('berita-detail');
 
 // Other Public Pages
 Route::view('/organisasi', 'pages.organisasi')->name('organisasi');
