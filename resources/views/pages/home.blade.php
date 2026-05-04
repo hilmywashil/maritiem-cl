@@ -225,51 +225,75 @@
 
 
 
+    <!-- Tambahkan ini di <head> kalau belum -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <div class="site-section bg-light">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center border-primary">
                     <h2 class="font-weight-light text-primary">Strategic Plan CAAIP</h2>
-                    <p class="color-black-opacity-5">Strategi CAAIP dapat diringkas dalam tiga kata kunci utama: Karier,
-                        Kesejahteraan, dan
-                        Almamater.</p>
+                    <p class="color-black-opacity-5">
+                        Strategi CAAIP dapat diringkas dalam tiga kata kunci utama: Karier,
+                        Kesejahteraan, dan Almamater.
+                    </p>
                 </div>
             </div>
+
             <div class="row align-items-stretch">
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+
+                <!-- Pemberdayaan Alumni -->
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4"><span class="text-primary flaticon-travel"></span></div>
+                        <div class="unit-4-icon mr-4">
+                            <span class="text-primary">
+                                <i class="fas fa-users "></i>
+                            </span>
+                        </div>
                         <div>
-                            <h3>Air Air Freight</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae
-                                vitae
-                                eligendi at.</p>
+                            <h3>Pemberdayaan Alumni</h3>
+                            <p>
+                                Memperkuat jejaring kerja, sertifikasi internasional, dan memberikan
+                                bantuan modal usaha bagi alumni yang ingin berbisnis di darat.
+                            </p>
                             <p><a href="#">Learn More</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+
+                <!-- Perlindungan Sosial -->
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4"><span class="text-primary flaticon-sea-ship-with-containers"></span>
+                        <div class="unit-4-icon mr-4">
+                            <span class="text-primary">
+                                <i class="fas fa-shield-heart "></i>
+                            </span>
                         </div>
                         <div>
-                            <h3>Ocean Freight</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae
-                                vitae
-                                eligendi at.</p>
+                            <h3>Perlindungan Sosial</h3>
+                            <p>
+                                Menjamin pendidikan anak yatim alumni melalui beasiswa (YBS
+                                CAAIP) serta memberikan bantuan kesehatan bagi anggota.
+                            </p>
                             <p><a href="#">Learn More</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+
+                <!-- Transformasi Almamater -->
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4"><span class="text-primary flaticon-frontal-truck"></span>
+                        <div class="unit-4-icon mr-4">
+                            <span class="text-primary">
+                                <i class="fas fa-rocket "></i>
+                            </span>
                         </div>
                         <div>
-                            <h3>Ground Shipping</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae
-                                vitae
-                                eligendi at.</p>
+                            <h3>Transformasi Almamater</h3>
+                            <p>
+                                Mendukung peningkatan status STIP Jakarta menjadi institusi
+                                pendidikan maritim kelas dunia dan memperkuat pengaruh alumni di level kebijakan nasional.
+                            </p>
                             <p><a href="#">Learn More</a></p>
                         </div>
                     </div>

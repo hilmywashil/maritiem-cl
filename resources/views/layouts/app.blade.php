@@ -31,12 +31,113 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <style>
+        /* Sticky Header */
+        .sticky-header {
+            position: fixed;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background: #fff;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+            transition: top 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sticky-header.is-visible {
+            top: 0;
+        }
+
+        .sticky-header .sticky-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+        }
+
+        .sticky-header .sticky-logo img {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .sticky-header .sticky-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sticky-header .sticky-nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            display: inline-block;
+            transition: color 0.2s;
+        }
+
+        .sticky-header .sticky-nav ul li a:hover {
+            color: #f0a500;
+        }
+
+        .sticky-header .sticky-nav ul li.active a {
+            color: #f0a500;
+        }
+
+        /* Arrow for has-children */
+        .sticky-header .sticky-nav ul li.has-children>a::after {
+            content: ' \203A';
+            font-size: 15px;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 991px) {
+            .sticky-header .sticky-nav {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="site-wrap">
-
+        <!-- Sticky Header -->
+        <div class="sticky-header" id="stickyHeader">
+            <div class="sticky-inner">
+                <div class="sticky-logo">
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset('asset-front/images/caaip-logo.png') }}" alt="CAAIP Logo">
+                    </a>
+                </div>
+                <nav class="sticky-nav">
+                    <ul>
+                        <li class="{{ request()->routeIs('home') ? 'active' : '' }}">
+                            <a href="{{ route('home') }}">Beranda</a>
+                        </li>
+                        <li class="{{ request()->routeIs('about') ? 'active' : '' }}">
+                            <a href="{{ route('about') }}">Tentang</a>
+                        </li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Industries</a></li>
+                        <li class="{{ request()->routeIs('berita') ? 'active' : '' }}">
+                            <a href="{{ route('berita') }}">Berita</a>
+                        </li>
+                        <li class="{{ request()->routeIs('contact') ? 'active' : '' }}">
+                            <a href="{{ route('contact') }}">Kontak</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         @include('layouts.partials.header')
 
         @yield('content')
@@ -61,6 +162,20 @@
 
     <script src="{{ asset('asset-front/js/main.js') }}"></script>
 
+    <script>
+        (function () {
+            var stickyHeader = document.getElementById('stickyHeader');
+            var scrollThreshold = 120; // px sebelum header asli hilang dari viewport
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > scrollThreshold) {
+                    stickyHeader.classList.add('is-visible');
+                } else {
+                    stickyHeader.classList.remove('is-visible');
+                }
+            }, { passive: true });
+        })();
+    </script>
 </body>
 
 </html>
