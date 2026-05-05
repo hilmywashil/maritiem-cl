@@ -5,13 +5,13 @@
 @section('content')
 
     <div class="site-blocks-cover inner-page-cover overlay"
-        style="background-image: url('{{ asset('asset-front/images/ship_bg.jpg') }}');" data-aos="fade"
+        style="background-image: url('{{ asset('asset-front/images/hero_bg_caaip.jpg') }}');" data-aos="fade"
         data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
                 <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-                    <h1 class="text-white font-weight-light text-uppercase font-weight-bold">Contact Us</h1>
+                    <h1 class="text-white font-weight-light text-uppercase font-weight-bold">Kontak Kami</h1>
                     <p class="breadcrumb-custom"><a href="index.html">Home</a> <span class="mx-2">&gt;</span>
                         <span>Contact</span>
                     </p>
